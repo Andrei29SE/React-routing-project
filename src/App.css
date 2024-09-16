@@ -9,7 +9,12 @@ a {
   text-decoration: none;
 }
 a:hover {
-  background: linear-gradient(blue, 15%, rgb(192, 255, 192));
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+.active {
+  background: rgb(255, 255, 255);
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
 }
@@ -43,4 +48,7 @@ label {
   display: inline-block;
   text-align: right;
   padding: 10px;
+}
+li {
+  list-style: none;
 }

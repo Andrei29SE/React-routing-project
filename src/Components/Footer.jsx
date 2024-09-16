@@ -1,6 +1,7 @@
 const Footer = () => {
   return (
     <div className='footer'>
+      <h1>Fill in form to contact us!</h1>
       <form>
         <label>
           Email:
