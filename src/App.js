@@ -1,16 +1,23 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import About from './Components/About'
+import Home from './Components/Home'
+import Contacts from './Components/Contacts'
+import NotFound from './Components/NotFound'
+import MainLayout from './layouts/MainLayout'
 
 function App() {
   return (
     <BrowserRouter>
       <div className='App'>
         <Routes>
-          <Route path='/' element={<h1>Router</h1>}></Route>
-          <Route path='about' element={<h1>About</h1>}></Route>
-          <Route path='contacts' element={<h1>Contacts</h1>}></Route>
-          {/* Default route path=* */}
-          <Route path='*' element={<h1>404 Not Found</h1>}></Route>
+          <Route path='/' element={<MainLayout />}>
+            <Route index={true} element={<Home />} />
+            <Route path='about' element={<About />} />
+            <Route path='contacts' element={<Contacts />} />
+            {/* Default route path=* */}
+            <Route path='*' element={<NotFound />} />
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
