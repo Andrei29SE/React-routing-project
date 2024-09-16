@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  position: relative;
+  max-height: 650px;
 }
 a {
   color: rgb(0, 0, 0);
@@ -18,4 +20,27 @@ nav a {
 nav {
   background-color: rgb(185, 231, 231);
   padding: 5px;
+}
+.footer {
+  padding: 15px;
+  margin-top: 500px;
+  background-color: rgb(185, 231, 231);
+}
+.top {
+  position: absolute;
+}
+.bottom {
+  position: absolute;
+  top: 500px;
+}
+
+input {
+  border-radius: 5px;
+  height: 30px;
+}
+label {
+  font-size: 25px;
+  display: inline-block;
+  text-align: right;
+  padding: 10px;
 }
