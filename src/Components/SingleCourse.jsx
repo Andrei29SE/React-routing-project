@@ -1,20 +1,44 @@
 import { Link } from 'react-router-dom'
 import courses from '../data/courses'
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
+// import NotFound from './NotFound'
+
+import { useEffect, useState } from 'react'
 const SingleCourse = () => {
+  const [isLoading, setIsLoading] = useState(false)
   const params = useParams()
-  console.log(params)
+  const navigate = useNavigate()
+
   const course = courses.find((course) => course.slug === params.slug)
-  return (
-    <div className='courseCard'>
-      <h1>{course.title}</h1>
-      <h2>Main language: {course.slug}</h2>
-      <h3>Price per course: {course.price}$</h3>
-      <Link to='..' relative='path'>
-        All courses
-      </Link>
-    </div>
-  )
+  // Easy way  if (!course) {
+  //     return <NotFound />}
+  useEffect(() => {
+    if (!course) {
+      setIsLoading(true)
+      setTimeout(() => {
+        navigate('..', { relative: 'path' })
+      }, 3000)
+    }
+  }, [navigate, course])
+  if (course && !isLoading) {
+    return (
+      <div className='courseCard'>
+        <h1>{course?.title}</h1>
+        <h2>Main language: {course?.slug}</h2>
+        <h3>Price per course: {course?.price}$</h3>
+        <Link to='..' relative='path'>
+          All courses
+        </Link>
+      </div>
+    )
+  } else {
+    return (
+      <>
+        <h1> Course is not found! Redirect to Courses page!</h1>
+        <div className='loader'></div>
+      </>
+    )
+  }
 }
 
 export default SingleCourse
