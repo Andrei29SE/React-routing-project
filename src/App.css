@@ -28,7 +28,7 @@ nav {
 }
 .footer {
   padding: 15px;
-  margin-top: 500px;
+  margin-top: 25%px;
   background-color: rgb(185, 231, 231);
 }
 .top {
@@ -36,7 +36,6 @@ nav {
 }
 .bottom {
   position: absolute;
-  top: 500px;
 }
 
 input {
@@ -51,4 +50,31 @@ label {
 }
 li {
   list-style: none;
+}
+
+.courseCard {
+  border: 2px solid, rgb(34, 226, 226);
+  border-radius: 5px;
+  margin: 10px;
+  max-width: 450px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.courseCard:hover {
+  background-color: rgb(182, 235, 236);
+}
+.courseLink {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+}
+.linkBlock {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }

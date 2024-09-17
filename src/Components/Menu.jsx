@@ -9,6 +9,7 @@ const Menu = () => {
       <NavLink to='about'>About</NavLink>
       <NavLink to='contacts'>Contacts</NavLink>
       <NavLink to='prices'>Price</NavLink>
+      <NavLink to='courses'>Courses</NavLink>
     </nav>
   )
 }
