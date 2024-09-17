@@ -30,6 +30,12 @@ const Courses = () => {
 
   return (
     <div className='linkBlock'>
+      <select multiple size='1'>
+        {sort.map((course) => {
+          return <option key={course.id}>{course.slug}</option>
+        })}
+      </select>
+
       <h1>{sortkey ? `Corses sorted by ${sortkey}` : `Courses`}</h1>
       {sort.map((course) => {
         return (
