@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import Basket from './Basket'
 
-const Menu = () => {
+const Menu = ({ count, reset }) => {
   return (
     <>
       <nav className='navigation'>
@@ -12,7 +11,7 @@ const Menu = () => {
         <NavLink to='contacts'>Contacts</NavLink>
         <NavLink to='prices'>Price</NavLink>
         <NavLink to='courses'>Courses</NavLink>
-        <Basket />
+        <NavLink to='busket'>Busket</NavLink>
       </nav>
     </>
   )

@@ -2,10 +2,10 @@ import { Outlet } from 'react-router'
 import Menu from '../Components/Menu'
 import Footer from '../Components/Footer'
 
-const MainLayout = () => {
+const MainLayout = (count) => {
   return (
     <>
-      <Menu className='top' />
+      <Menu className='top' count={count} />
       <Outlet />
       <Footer className='bottom' />
     </>

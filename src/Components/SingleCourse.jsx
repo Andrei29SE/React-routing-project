@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router'
 // import NotFound from './NotFound'
 
 import { useEffect, useState } from 'react'
-const SingleCourse = () => {
+const SingleCourse = ({ add, delite, count }) => {
   const [isLoading, setIsLoading] = useState(false)
   const params = useParams()
   const navigate = useNavigate()
@@ -28,6 +28,12 @@ const SingleCourse = () => {
         <Link to='..' relative='path'>
           All courses
         </Link>
+        <button onClick={add}>Add to busket</button>
+        {count > 0 && (
+          <button onClick={delite} disabled={count <= 0}>
+            Delete from busket
+          </button>
+        )}
       </div>
     )
   } else {
