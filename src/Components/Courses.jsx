@@ -2,6 +2,8 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import courses from '../data/courses'
 import quertString from 'query-string'
 import { useEffect, useState } from 'react'
+import SearchBar from './SearchBar'
+import { GoSearch } from 'react-icons/go'
 // key in the funct bellow are title,id,slug from courses array of objects
 
 const SORT_KEY = ['title', 'slug', 'id']
@@ -30,12 +32,9 @@ const Courses = () => {
 
   return (
     <div className='linkBlock'>
-      <select multiple size='1'>
-        {sort.map((course) => {
-          return <option key={course.id}>{course.slug}</option>
-        })}
-      </select>
-
+      <SearchBar className='search'>
+        <GoSearch />
+      </SearchBar>
       <h1>{sortkey ? `Corses sorted by ${sortkey}` : `Courses`}</h1>
       {sort.map((course) => {
         return (

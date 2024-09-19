@@ -8,7 +8,6 @@ const SingleCourse = () => {
   const [isLoading, setIsLoading] = useState(false)
   const params = useParams()
   const navigate = useNavigate()
-
   const course = courses.find((course) => course.slug === params.slug)
   // Easy way  if (!course) {
   //     return <NotFound />}

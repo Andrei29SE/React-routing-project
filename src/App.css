@@ -3,6 +3,18 @@
   position: relative;
   max-height: 650px;
 }
+.busket {
+  font-size: 30px;
+  margin-right: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(185, 231, 231);
+  border-radius: 5px;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 a {
   color: rgb(0, 0, 0);
   font-size: 25px;
@@ -13,6 +25,20 @@ a:hover {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
 }
+.submitButton {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  max-width: 250px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+.submitButton:hover {
+  box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
 .active {
   background: rgb(255, 255, 255);
   border: 2px solid rgb(0, 0, 0);
@@ -22,7 +48,8 @@ nav a {
   margin: 15px;
 }
 
-nav {
+nav,
+.search {
   background-color: rgb(185, 231, 231);
   padding: 5px;
 }
@@ -30,17 +57,22 @@ nav {
   padding: 15px;
   margin-top: 25%px;
   background-color: rgb(185, 231, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.top {
-  position: absolute;
-}
-.bottom {
-  position: absolute;
+
+.formSubmit {
+  display: inline-flex;
+  flex-flow: column;
 }
 
 input {
   border-radius: 5px;
   height: 30px;
+  font-size: 1.3rem;
+  align-items: start;
 }
 label {
   font-size: 25px;
@@ -52,7 +84,8 @@ li {
   list-style: none;
 }
 
-.courseCard {
+.courseCard,
+select {
   border-radius: 5px;
   margin: 10px;
   max-width: 450px;
@@ -93,4 +126,10 @@ li {
   to {
     transform: rotate(1turn);
   }
+}
+
+select {
+  min-width: 150px;
+  align-items: center;
+  text-align: center;
 }
