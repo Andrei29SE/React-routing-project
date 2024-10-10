@@ -1,3 +1,135 @@
 .App {
   text-align: center;
+  position: relative;
+  max-height: 650px;
+}
+.busket {
+  font-size: 30px;
+  margin-right: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(185, 231, 231);
+  border-radius: 5px;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  text-decoration: none;
+}
+a:hover {
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+.submitButton {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  max-width: 250px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+.submitButton:hover {
+  box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.active {
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+nav a {
+  margin: 15px;
+}
+
+nav,
+.search {
+  background-color: rgb(185, 231, 231);
+  padding: 5px;
+}
+.footer {
+  padding: 15px;
+  margin-top: 25%px;
+  background-color: rgb(185, 231, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formSubmit {
+  display: inline-flex;
+  flex-flow: column;
+}
+
+input {
+  border-radius: 5px;
+  height: 30px;
+  font-size: 1.3rem;
+  align-items: start;
+}
+label {
+  font-size: 25px;
+  display: inline-block;
+  text-align: right;
+  padding: 10px;
+}
+li {
+  list-style: none;
+}
+
+.courseCard,
+select {
+  border-radius: 5px;
+  margin: 10px;
+  max-width: 450px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.courseCard:hover {
+  background-color: rgb(182, 235, 236);
+}
+.courseLink {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+}
+.linkBlock {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.loader {
+  margin: 25px auto;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 3px;
+  background: radial-gradient(farthest-side, rgb(182, 235, 236) 95%, #0000) 50%
+      0/12px 12px no-repeat,
+    radial-gradient(farthest-side, #0000 calc(100% - 5px), rgb(182, 235, 236))
+      content-box;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+select {
+  min-width: 150px;
+  align-items: center;
+  text-align: center;
 }
